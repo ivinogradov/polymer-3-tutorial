@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-
+import '@polymer/paper-button/paper-button';
 /**
  * `my-article`
  * 
@@ -28,6 +28,7 @@ class MyArticle extends PolymerElement {
       <div class="article">
         <h2>[[title]]</h2>
         <p>[[content]]</p>
+        <paper-button>[[button]]</paper-button>
       </div>
     `;
   }
@@ -40,6 +41,10 @@ class MyArticle extends PolymerElement {
       content: {
         type: String,
         value: 'Content'
+      },
+      button: {
+        type: String,
+        value: 'More'
       }
     };
   }
